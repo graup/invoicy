@@ -1,0 +1,97 @@
+body {
+    font-family: sans-serif;
+    margin: 1.5cm;
+    max-width: 19cm;
+    position: relative;
+    padding-bottom: 3cm;
+    font-size: 10pt;
+    min-height: calc(100vh - 3cm);
+    box-sizing: border-box;
+}
+
+p, .data-table {
+    margin: 0 0 1em;
+    line-height: 1.4;;
+}
+
+h1 {
+    font-weight: normal;
+    font-size: 30px;
+}
+
+.logo {
+    height: 1cm;
+    margin-bottom: 10px;
+}
+
+.data {
+    float: right;
+}
+
+.from {
+    margin-bottom: 1cm;
+}
+
+.to {
+    float: left;
+    margin-top: 2cm;
+    max-width: 8cm;
+}
+
+.data-table {
+    border-collapse: collapse;
+}
+.data-table th {
+    text-align: left;
+}
+.data-table th, .data-table td {
+    padding: 0 1em 0 0;
+}
+
+.item-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2.8cm 0 2cm 0;
+}
+.item-table th, .item-table td {
+    padding: .55em .75em;
+    text-align: right;
+}
+.item-table th:first-child, .item-table td:first-child,
+.item-table tfoot td:not(:last-child) {
+    text-align: left;
+}
+
+.item-table thead th {
+    border: 1px solid #000;
+    border-width: 1px 0;
+}
+.item-table tfoot tr:first-child td {
+    padding-top: 1cm;
+}
+.amount-due {
+    background-color: #eee;
+    font-weight: bold;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    font-size: .8em;
+    color: #444;
+}
+
+.marker {
+    width: .3cm;
+    border-top: 1px solid #aaa;
+    position: fixed;
+    left: 0;
+}
+.marker-1 {
+    top: 9.9cm;
+}
+.marker-2 {
+    top: 19.8cm;
+}

@@ -1,0 +1,16 @@
+invoice-no: 20200001
+invoice-date: 2020-01-01
+due-date: 2020-01-07
+currency: USD
+amountPaid: 0
+bill-to: |
+    Big Corp
+    Suite 1234, 55th Floor
+    Central Plaza, 18 Harbour Road, Wanchai
+    Hong Kong
+terms: |
+    Pay to: Ethereum address 0x...
+items:
+    - item: Consulting services according to agreement, April 2020
+      qty: 1
+      unit: 2000

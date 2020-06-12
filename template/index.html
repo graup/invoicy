@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Invoice</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="marker marker-1"></div><div class="marker marker-2"></div>
+
+    <div class="data">
+      <p class="from">
+        <img src="/logo.png" class="logo" onError="this.src = './logo.png'"><br>
+        John Doe<br>
+        Consulting Corp<br>
+        124 Main Street<br>
+        Seoul, South Korea
+      </p>
+
+      <table class="data-table">
+        <tr><th>Invoice No.:</th><td>{{invoice-no}}</td></tr>
+        <tr><th>Issue Date:</th><td>{{invoice-date}}</td></tr>
+        <tr><th>Due Date:</th><td>{{due-date}}</td></tr>
+      </table>
+    </div>
+
+    <h1>Invoice</h1>
+
+    <p class="to">
+      <strong>Bill to</strong><br>
+      {{{billToHtml}}}
+    </p>
+
+    <div style="clear: right;"></div>
+    <table class="item-table">
+      <thead>
+        <tr>
+          <th>Item</th>
+          <th>Qty.</th>
+          <th>Rate</th>
+          <th>Amount</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#items}}
+        <tr>
+          <td>{{item}}</td>
+          <td>{{qty}}</td>
+          <td>{{currency}} {{unitPrice}}</td>
+          <td>{{currency}} {{itemPrice}}</td>
+        </tr>
+        {{/items}}
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan=2></td>
+          <td>Total:</td>
+          <td>{{currency}} {{totalAmount}}</td>
+        </tr>
+        <tr>
+          <td colspan=2></td>
+          <td>Paid:</td>
+          <td>{{currency}} {{amountPaid}}</td>
+        </tr>
+        <tr>
+          <td colspan=2></td>
+          <td class="amount-due">Amount due:</td>
+          <td class="amount-due">{{currency}} {{amountDue}}</td>
+        </tr>
+      </tfoot>
+    </table>
+
+    <p>
+      <strong>Terms and notes</strong><br>
+      {{terms}}
+    </p>
+
+    <div class="footer">
+      Consulting Corp, 124 Main Street Seoul, South Korea.<br>
+      Web: http://google.com E-mail: example@google.com
+    </div>
+  </body>
+</html>
